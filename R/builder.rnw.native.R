@@ -1,15 +1,26 @@
-#' This function will build Sweave (Rnw) files. Specifically this function will
-#' first run Stangle, then Sweave, and finally texti2pdf.
+#' Build Sweave files using native calls to pdflatex.
+#' 
+#' This function will build Sweave (Rnw) files. This function is similar to 
+#' \code{\link{builder.rnw}} but instead of calling \code{texti2pdf}, this will 
+#' call latex natively instead of using the \code{texi2dvi} function.
+#' \code{
+#' system('pdflatex FILENAME') 
+#' system('bibtex FILENAME')
+#' system('pdflatex FILENAME')
+#' system('pdflatex FILENAME')
+#' }
 #'
 #' @param project the project to be built.
 #' @param theenv the environment to build in.
 #' @param fork if true Sweave will be executed in a separate R instance.
 #' @param debug debug option sent to the Sweave function. If true, the output
 #'        of R code from the Rnw file will be printed as it is running.
+#' @param native if not NULL, the shell command to execute to generate
 #' @param ... other unspecified parameters
 #' @return the name of the file if successfully built.
+#' @seealso \code{\link{system}}
 #' @export
-builder.rnw <- function(project, theenv, fork=TRUE, debug=TRUE, ...) {
+builder.rnw.native <- function(project, theenv, fork=TRUE, debug=TRUE, ...) {
 	sleeptime = 2
 	sourceFile = ifelse(is.null(project$SourceFile), ".rnw$", project$SourceFile)
 	wd = eval(getwd(), envir = theenv)
@@ -33,9 +44,12 @@ builder.rnw <- function(project, theenv, fork=TRUE, debug=TRUE, ...) {
 			Sweave(file, debug=debug)
 		}
 		Sys.sleep(sleeptime)
-		texfile = paste(substr(file, 1, (nchar(file) - 4)), ".tex", sep = "")
-		message(paste("Running texi2pdf on ", texfile, "...\n", sep=''))
-		texi2pdf(texfile, quiet=FALSE, clean=TRUE)
+		texfile = substr(file, 1, (nchar(file) - 4))
+		message(paste("Running pdflatex on ", texfile, "...\n", sep=''))
+		system(paste('pdflatex ', texfile, '.tex', sep=''))
+		system(paste('bibtex ', texfile, sep=''))
+		system(paste('pdflatex ', texfile, '.tex', sep=''))
+		system(paste('pdflatex ', texfile, '.tex', sep=''))
 		built = c(built, paste(substr(file, 1, (nchar(file) - 4)), ".pdf", sep = ""))
 		Sys.sleep(sleeptime)
 	}

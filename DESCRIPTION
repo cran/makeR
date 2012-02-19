@@ -2,7 +2,7 @@ Package: makeR
 Type: Package
 Title: Package for managing projects with multiple versions derived
         from a single source repository.
-Version: 1.0.1
+Version: 1.0.2
 Date: 2012-02-19
 Author: Jason Bryer <jason@bryer.org>
 Maintainer: Jason Bryer <jason@bryer.org>
@@ -20,6 +20,7 @@ Collate: 'Build.R' 'Version.R' 'buildVersion.R' 'releaseVersion.R'
         'makeR-package.R' 'Project.R' 'GoogleReader.R' 'calendarHeat.R'
         'writeProject.R' 'builder.rnw.R' 'builder.tex.R' 'env2string.R'
         'builder.cacheSweave.R' 'makeR.R' 'builder.knitr.R'
-Packaged: 2012-02-20 23:36:22 UTC; jbryer
+        'builder.rnw.native.R'
+Packaged: 2012-03-26 18:59:13 UTC; jbryer
 Repository: CRAN
-Date/Publication: 2012-03-01 07:39:30
+Date/Publication: 2012-03-26 21:08:50
