@@ -1,11 +1,11 @@
-19add5b6006c32b0cc415236819eaa4d *DESCRIPTION
+3f55b482cbbd466910217cfa355c763e *DESCRIPTION
 d638ef50aaa3bba244c2cef50c7d8e7e *NAMESPACE
-748e0a4d32aa376716988a43afd9ce89 *NEWS
+f4cf9b2264edcd24f9d90b9796643602 *NEWS
 b3576cd03a1e0b5d992c444f8b0959e6 *R/Build.R
 690e9776381157adb30da0fbae6260ea *R/GoogleReader.R
 ce1a496726017b79075210236db4067f *R/Project.R
 54c7d1cbaee54403cd5355c8652929c6 *R/Version.R
-da83fd42e92f3809ad23d2a513ca3809 *R/buildVersion.R
+ddf97a6d49448980ea8aee25aebfe317 *R/buildVersion.R
 9fa072876764ffa137c43ca31f3edd30 *R/builder.cacheSweave.R
 c2c2e807772e4b87f59778af641ebc52 *R/builder.knitr.R
 07f9b2798fcab9660d901bd2574ff6ac *R/builder.rnw.R
@@ -19,10 +19,10 @@ db516b57f37664b1aa8e0a271205f465 *R/env2string.R
 9fa15e2989c7f7129cfc538c49d93e0a *README.md
 c4c119fae68767e535d1e7acab05723a *demo/00Index
 75f6f5b60a98677c4573414e1eab971a *demo/makeR-knitr.R
-fe8a7740a229125db0b37de0a7322f35 *demo/rbloggers.R
+23c1383d0b2b84d107392ff5825606ff *demo/rbloggers.R
 840c696165d430623a661cbb3e355e1d *demo/stocks.R
-3798aab4d2b9ebb0e23a7ae0541df823 *inst/doc/makeR.Rnw
-34d1596706b30a9f7bdcb08df1d0f624 *inst/doc/makeR.pdf
+918c580ebfa3a3c7f038d8d480f8ed0a *inst/doc/makeR.Rnw
+71fea809f76d71eb0cc3495668e3b279 *inst/doc/makeR.pdf
 e85c732ecb069ae7228e41793b63a357 *inst/rbloggers/rbloggers.Rnw
 63f7f0c8092ba3c4026dbe8a6eb1254a *inst/stocks/stocks.R
 71b09f887a93ab39b54f538bd1f90b51 *man/Build.Rd
@@ -52,7 +52,7 @@ fe80d4b0a16c8946c3aa40be1804d7ef *man/setDefaultBuilder.Rd
 d5500ae911120c3e3631ab6fad62165b *man/write.Project.Rd
 b39a828d59497c361204f9078cf4c021 *vignettes/Bibliography.bib
 9185e6a787459afe1b348fd5fcba1c95 *vignettes/RJournal.sty
-3798aab4d2b9ebb0e23a7ae0541df823 *vignettes/makeR.Rnw
+918c580ebfa3a3c7f038d8d480f8ed0a *vignettes/makeR.Rnw
 0872341d25c1b217e670f6cb8ca2cc59 *vignettes/makeRClassDiagram.pdf
 50ab627573b26040df9b2cb7e95760e6 *vignettes/rbloggers.pdf
 4142b9a57136a83217d30df9dcbd8f59 *vignettes/rbloggers.png
